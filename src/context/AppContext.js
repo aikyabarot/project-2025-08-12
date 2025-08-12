@@ -22,7 +22,7 @@ export function AppProvider({ children }) {
 
   // Data state (mock "DB")
   const [clients, setClients] = useState(MOCK_CLIENTS);
-  const [jobs, setJobs] = useState(MOCK_JOBS);
+  const [jobs] = useState(MOCK_JOBS);
   const [candidates] = useState(MOCK_CANDIDATES);
   const [people, setPeople] = useState(MOCK_PEOPLE);
 
@@ -136,17 +136,14 @@ export function AppProvider({ children }) {
       getClients,
       getPeople
     }),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [
       activeUser,
       currentPage,
       pageContext,
       isCandidateModalOpen,
       selectedCandidateId,
-      toastMessage,
-      clients,
-      jobs,
-      candidates,
-      people
+      toastMessage
     ]
   );
 

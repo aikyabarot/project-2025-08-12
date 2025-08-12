@@ -1,78 +1,76 @@
-# Gray Matter (CRA + Tailwind + Chart.js)
+# Gray Matter App
 
-React + Tailwind CSS demo app for client/job/candidate tracking. Built with Create React App (JavaScript), styled with Tailwind, and includes a Chart.js example.
+React + Tailwind CSS demo app for client/job/candidate tracking. Built with Create React App (CRA + CRACO), styled with Tailwind CSS, and includes Chart.js visualization.
 
-## Stack
+## Quick Start
 
-- Create React App (CRA)
-- CRACO (for Tailwind in CRA without eject)
-- React 18
-- Tailwind CSS 3
-- Chart.js 4
-- gh-pages (for GitHub Pages deployment)
+**Prerequisites:** Node.js 20+ (see `.nvmrc`)
 
-## Getting Started
-
-Prerequisites:
-- Node.js 18+ (Node 20 also works)
-- npm
-
-Install:
 ```bash
+# Install dependencies
 npm install
-```
 
-Run locally:
-```bash
+# Start development server
 npm start
-```
-App runs at http://localhost:3000
+# App runs at http://localhost:3000
 
-Build:
-```bash
+# Build for production
 npm run build
+
+# Run tests
+npm test
 ```
 
-## Run in an online sandbox (CodeSandbox, etc.)
+## Tailwind CSS
 
-- Import this GitHub repository URL directly.
-- The sandbox will install and run automatically. If not:
-  ```bash
-  npm install
-  npm start
-  ```
-- This repo uses CRACO to enable Tailwind with CRA. Scripts are `craco start/build/test`.
+This project uses Tailwind CSS with CRACO for CRA integration. The main styles are in `src/index.css` with the required `@tailwind` directives.
 
-## GitHub Pages Deployment
+## Environment Variables
 
-This project is pre-configured with `gh-pages`:
-- `homepage` is set to: `https://aikyabarot.github.io/Grey-matter003`
-- Scripts:
-  - `predeploy`: builds the app
-  - `deploy`: publishes the `build` directory to the `gh-pages` branch
+Copy `.env.example` to `.env` for local development if needed. CRA only exposes variables starting with `REACT_APP_*`. See [CRA Environment Variables Guide](https://create-react-app.dev/docs/adding-custom-environment-variables/) for more information.
 
-Deploy:
+## GitHub Codespaces
+
+This repository is ready for GitHub Codespaces:
+
+1. **Open in Codespaces**: Click "Code" → "Codespaces" → "Create codespace"
+2. **Auto-setup**: The devcontainer will automatically install dependencies
+3. **Start developing**: Run `npm start` to launch the dev server on port 3000
+4. **Port forwarding**: Port 3000 is automatically forwarded and accessible
+
+The devcontainer includes recommended VS Code extensions for React, Tailwind, ESLint, and Prettier.
+
+## Continuous Integration
+
+CI workflow runs on all pushes and pull requests:
+- ✅ Install dependencies with npm
+- ✅ Build application (`npm run build`)  
+- ✅ Run tests (`npm test`)
+
+## Local Development Setup
+
+For the best development experience:
+
+1. **Use Node 20**: `nvm use` (if you have nvm installed)
+2. **Install dependencies**: `npm install`
+3. **Copy environment**: `cp .env.example .env` (optional)
+4. **Start coding**: `npm start`
+
+## Project Structure
+
+- `src/` - React application source code
+- `public/` - Static assets
+- `docs/` - Additional project documentation
+- `.devcontainer/` - GitHub Codespaces configuration
+- `.github/workflows/` - CI/CD workflows
+
+## Additional Commands
+
 ```bash
-npm run deploy
+npm run format     # Format code with Prettier
+npm run deploy     # Deploy to GitHub Pages
+npm run audit:report # Generate security audit report
 ```
-
-Then in your repository settings on GitHub:
-- Settings → Pages → Set "Branch" to `gh-pages` (root)
-
-Your site will be available at the `homepage` URL.
-
-## Documentation
-
-- TypeScript migration plan: see `docs/MIGRATION-TS.md`
-- Routing refactor proposal: see `docs/ROUTING-STRUCTURE.md`
-- Security audit instructions and report placeholders: see `docs/SECURITY-AUDIT.md`
-- Project info summary: see `docs/PROJECT-INFO.md`
-
-## Notes
-
-- Replace the placeholder logo in `Sidebar` with your real logo (put files in `public/`).
-- To add Prettier formatting run: `npm run format`.
-- CRA includes basic ESLint configuration by default.
 
 ## License
 
