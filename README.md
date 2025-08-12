@@ -43,6 +43,10 @@ npm run build
   ```
 - This repo uses CRACO to enable Tailwind with CRA. Scripts are `craco start/build/test`.
 
+## GitHub Codespaces
+
+When you create a new Codespace, `.env.local` is created automatically on first start with container-friendly defaults. You can edit it as needed (do not commit it).
+
 ## GitHub Pages Deployment
 
 This project is pre-configured with `gh-pages`:
