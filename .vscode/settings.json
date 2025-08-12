@@ -1,0 +1,18 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "tailwindCSS.includeLanguages": {
+    "javascript": "javascript",
+    "html": "HTML"
+  },
+  "tailwindCSS.emmetCompletions": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  }
+}

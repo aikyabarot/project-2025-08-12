@@ -112,8 +112,8 @@ temp/
 ehthumbs.db
 Thumbs.db
 
-# Editor directories and files
-.vscode/
+# Editor directories and files (keep some VS Code settings)
+.vscode/*
 !.vscode/settings.json
 !.vscode/extensions.json
 .idea
